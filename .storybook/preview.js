@@ -1,13 +1,16 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/core/styles'
+import { FormThemeProvider } from '../src'
 import './style.css'
 
 export const decorators = [
   (Story) => (
     <ThemeProvider>
+      <FormThemeProvider>
+        <Story />
+      </FormThemeProvider>
       <CssBaseline />
-      <Story />
     </ThemeProvider>
   ),
 ]
