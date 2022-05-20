@@ -1,8 +1,8 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { actions } from '@storybook/addon-actions'
-
-import Form, { Input } from '../src'
+import Form from 'react-form-component'
+import { Input } from '../src'
 import { formControlArgs, formControlArgTypes } from './formControlArgs'
 
 Input.displayName = 'Input'
@@ -19,20 +19,17 @@ export default {
     },
   },
   argTypes: {
-    placeholder: {
-      description: 'Displayed when value is empty `string`',
-    },
     prefix: {
       description: 'Decorates left side of a field with symbol, unit etc. `ReactNode`',
     },
     suffix: {
       description: 'Decorates right side of a field with symbol, unit etc. `ReactNode`',
     },
-    narrow: {
-      description: 'Decreases input width `boolean`',
+    fullWidth: {
+      description: 'Disables max width of the field and sets it to 100% width of parent container.',
     },
-    large: {
-      description: 'Increases input height `boolean`',
+    variant: {
+      description: 'The graphical variant `filled` `outlined` `standard`',
     },
     type: {
       description: `Type of input \`text\` \`email\` \`password\` \`url\` \`tel\` \`number\` \`search\` \`file\` \`date\` \`datetime-local\` \`month\` \`week\` \`time\` \`postcode\` \`password-novalidation\``,
@@ -65,31 +62,10 @@ BasicUsage.args = {
   name: 'example',
   label: 'Basic input',
   type: 'text',
-  placeholder: 'Placeholder text',
   prefix: '✨',
   suffix: '€',
   min: 5,
-  narrow: false,
-  large: false,
   initialValue: '',
   activateEnterPress: false,
   ...formControlArgs,
 }
-
-export const Debounce = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Debounce.args = {
-  name: 'debouncedInput',
-  label: 'Debounce example',
-  debounceTime: 500,
-  help: 'Add onChange prop to parent Form component to see how build-in debounce updates the form state with debounce.',
-}
-
-export const OnEnterPress = Template.bind({})
-OnEnterPress.args = {
-  name: 'enterInput',
-  label: 'ActivateEnterPress prop example',
-  activateEnterPress: true,
-  help: 'Type something, press Enter key. See the actions log in a canvas mode.',
-}
-

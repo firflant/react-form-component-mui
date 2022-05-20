@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '@material-ui/core'
-import { fieldsData, useSubmit } from 'react-form-component'
+import { Button } from '@material-ui/core'
+import { fieldsData, useSubmit, Loader } from 'react-form-component'
 
 
 /**
@@ -17,9 +17,8 @@ const FormButton = ({
   return (
     <Button
       onClick={(e: React.MouseEvent<HTMLButtonElement>) => submit(e, onClick, reset)}
-      loading={loading}
     >
-      {children}
+      {loading && <><Loader />&nbsp;</>}{children}
     </Button>
   )
 }

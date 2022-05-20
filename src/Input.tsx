@@ -2,8 +2,8 @@ import React from 'react'
 import { debounce } from 'throttle-debounce'
 import MUIInput from '@material-ui/core/Input'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import { setValue, value } from '../typings'
-import { withFormControl } from '../.'
+import { setValue, value } from 'react-form-component'
+import { withFormControl } from './'
 
 /**
  * A basic input field.
@@ -20,7 +20,7 @@ const Input = ({
   prefix,
   suffix,
   setValue,
-  multiline,
+  multiline = false,
   ...otherProps
 }: InputProps) => {
   const [internalValue, setInternalValue] = React.useState('')
@@ -70,7 +70,6 @@ const Input = ({
         ? <InputAdornment position='end'>{suffix}</InputAdornment>
         : null
       }
-      onBlur={e => handleSetValue(e.target.value)}
       multiline={multiline}
       {...otherProps}
     />
@@ -82,9 +81,11 @@ export interface InputProps {
   type?: 'text' | 'email' | 'password' | 'url' | 'tel' | 'number' | 'search' | 'file' | 'date' | 'datetime-local' | 'month' | 'week' | 'time' | 'postcode' | 'password-novalidation',
   value: value,
   placeholder: string | undefined,
+  multiline?: boolean,
+  prefix?: React.ReactNode,
+  suffix?: React.ReactNode,
   min: number,
   debounceTime: number,
-  accept: string,
   activateEnterPress?: boolean,
   mandatory: boolean,
   setValue: setValue,

@@ -4,9 +4,7 @@ import MUIFormControl from '@material-ui/core/FormControl'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import InputLabel from '@material-ui/core/InputLabel'
 import { makeStyles } from '@material-ui/core/styles'
-import {
-  FormControlProps,
-} from 'react-form-component'
+import { FormControlProps } from './typings'
 
 
 const FormControl = ({
@@ -17,6 +15,8 @@ const FormControl = ({
   label,
   help,
   className = '',
+  fullWidth,
+  variant,
   children,
 }: FormControlProps) => {
   const classes = useStyles()

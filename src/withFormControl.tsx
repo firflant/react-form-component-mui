@@ -1,7 +1,10 @@
 import React from 'react'
-import { FormControl } from './FormControl'
-import { useControlLogic } from 'react-form-component'
-import { ControlLogicProps, InputProps } from 'react-form-component'
+import FormControl from './FormControl'
+import {
+  ControlLogicProps,
+  InputProps,
+  useControlLogic,
+} from 'react-form-component'
 
 
 function withFormControl<T>(
