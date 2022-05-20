@@ -1,8 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { actions } from '@storybook/addon-actions'
-import Form from 'react-form-component'
-import { Input } from '../src'
+import { Form, Input } from '../src'
 import { formControlArgs, formControlArgTypes } from './formControlArgs'
 
 Input.displayName = 'Input'
