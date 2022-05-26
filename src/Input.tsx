@@ -76,7 +76,7 @@ const Input = ({
   )
 }
 
-export interface InputProps {
+interface InputProps {
   name: string,
   type?: 'text' | 'email' | 'password' | 'url' | 'tel' | 'number' | 'search' | 'file' | 'date' | 'datetime-local' | 'month' | 'week' | 'time' | 'postcode' | 'password-novalidation',
   value: value,
