@@ -43,6 +43,7 @@ const useStyles = makeStyles(() => ({
   root: {
     maxWidth: `100%`,
     display: 'flex',
+    height: 'auto',
   },
   noBottomGutter: {
     marginBottom: 0,
