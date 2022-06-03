@@ -7,7 +7,7 @@ This project is in an early development phase and provides only [few basic compo
 ### Install
 
 ```
-yarn add react-form-component
+yarn add react-form-component-mui
 ```
 
 ### Use
