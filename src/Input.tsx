@@ -28,6 +28,7 @@ const Input = ({
   ...otherProps
 }: InputProps) => {
   const [internalValue, setInternalValue] = React.useState('')
+  console.log('help: ', help);
 
   // Apply initial value and react on initialValue change.
   React.useEffect(() => {
@@ -80,6 +81,7 @@ const Input = ({
           : null,
       }}
       multiline={multiline}
+      onBlur={e => handleSetValue(e.target.value)}
       {...otherProps}
     />
   )
