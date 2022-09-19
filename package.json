@@ -1,7 +1,7 @@
 {
-  "name": "react-form-component-mui",
-  "version": "0.1.1",
-  "description": "Material UI components for react-form-components library.",
+  "name": "@react-form-component/mui",
+  "version": "1.0.0",
+  "description": "Material UI components for react-form-component library.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [

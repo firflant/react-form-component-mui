@@ -7,7 +7,7 @@ This project is in an early development phase and provides only [few basic compo
 ### Install
 
 ```
-yarn add react-form-component-mui
+yarn add @react-form-component/mui
 ```
 
 ### Use
@@ -17,7 +17,7 @@ yarn add react-form-component-mui
 // Wrap entitre app into a FormThemeProvider.
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { FormThemeProvider } from 'react-form-component-mui'
+import { FormThemeProvider } from '@react-form-component/mui'
 import BasicExampleForm from './BasicExampleForm'
 
 const App = () =>
@@ -36,7 +36,7 @@ import Form, {
   Input,
   Select,
   SubmitButton,
-} from 'react-form-component-mui'
+} from '@react-form-component/mui'
 
 const BasicExampleForm = () =>
   <Form fields={['name', 'email', 'type']}>
